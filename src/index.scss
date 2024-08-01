@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@mixin bg-gradient($src){
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.95) 0,
+    rgba(0, 0, 0, 0.4) 60%,
+    rgba(0, 0, 0, 0.95) 100%
+  ),
+  url($src);
+}
+
+$landing_bg : "https://assets.nflxext.com/ffe/siteui/vlv3/21a8ba09-4a61-44f8-8e2e-70e949c00c6f/d78568ee-97d4-4a39-bcf5-3d68daac109f/CA-en-20240722-POP_SIGNUP_TWO_WEEKS-perspective_WEB_6255aed2-1790-4515-9e34-eec50ed3fc49_small.jpg";
+$login_bg : "https://assets.nflxext.com/ffe/siteui/vlv3/826348c2-cdcb-42a0-bc11-a788478ba5a2/0eb93bcd-f75c-4289-8027-87920af580ae/CA-en-20240729-POP_SIGNUP_TWO_WEEKS-perspective_WEB_036a7c53-c372-4a79-83be-b8b3f890614f_large.jpg";
+
+* {
+  font-family: "Martel Sans", sans-serif;
+}
+
+#landingForm
+ {
+  @include bg-gradient($landing_bg)
+}
+
+#loginForm
+ {
+  @include bg-gradient($login_bg)
+}
+
+
